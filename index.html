@@ -7,243 +7,328 @@
     <meta name="keywords" content="digital banking, neobank, Chime, Cash App, online banking, fintech, mobile banking">
     <title>Digital Banking Hub - Honest Neobank Reviews 2026</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy:   #0d2b52;
+            --blue:   #1a4480;
+            --green:  #00b87a;
+            --green2: #00965f;
+            --text:   #1c1c2e;
+            --muted:  #52526a;
+            --bg:     #f2f4f8;
+            --card:   #ffffff;
+            --border: #e4e8f0;
+        }
+
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            color: #1a1a2e;
-            background: #f5f7fa;
+            color: var(--text);
+            background: var(--bg);
             line-height: 1.75;
             font-size: 16px;
         }
 
-        /* HEADER */
+        /* ─── HEADER ─── */
         header {
-            background: linear-gradient(135deg, #0f3460 0%, #1a4a8a 100%);
-            color: white;
-            padding: 50px 20px 60px;
+            background: linear-gradient(150deg, #0d2b52 0%, #1a4480 60%, #1e5799 100%);
+            color: #fff;
+            padding: 56px 20px 64px;
             text-align: center;
         }
-        header .logo {
-            font-size: 13px;
-            letter-spacing: 3px;
+        .logo-label {
+            font-size: 11px;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            opacity: 0.7;
-            margin-bottom: 14px;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 18px;
         }
         header h1 {
-            font-size: clamp(1.6em, 5vw, 2.6em);
+            font-size: clamp(1.7em, 5vw, 2.7em);
             font-weight: 800;
-            margin-bottom: 14px;
             line-height: 1.2;
+            margin-bottom: 16px;
+            color: #fff;
         }
         header p {
-            font-size: clamp(0.95em, 2.5vw, 1.1em);
-            opacity: 0.82;
-            max-width: 540px;
+            font-size: clamp(0.95em, 2.5vw, 1.08em);
+            color: rgba(255,255,255,0.78);
+            max-width: 520px;
             margin: 0 auto;
         }
 
-        /* NAV */
+        /* ─── NAV ─── */
         nav {
-            background: rgba(15, 52, 96, 0.97);
+            background: rgba(13,43,82,0.98);
             position: sticky;
             top: 0;
             z-index: 100;
-            padding: 0 16px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 4px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            gap: 2px;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.22);
         }
         nav a {
-            color: rgba(255,255,255,0.75);
+            color: rgba(255,255,255,0.72);
             text-decoration: none;
-            padding: 13px 14px;
-            font-size: 0.88em;
-            font-weight: 500;
-            transition: color 0.2s;
+            padding: 13px 16px;
+            font-size: 0.87em;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: color 0.18s;
+            border-bottom: 2px solid transparent;
         }
-        nav a:hover { color: #00c896; }
+        nav a:hover {
+            color: #fff;
+            border-bottom-color: var(--green);
+        }
 
-        /* CONTAINER */
+        /* ─── LAYOUT ─── */
         .container {
-            max-width: 820px;
+            max-width: 840px;
             margin: 0 auto;
-            padding: 16px;
+            padding: 24px 16px;
         }
 
-        /* CARD */
+        /* ─── CARD ─── */
         .card {
-            background: white;
-            border-radius: 16px;
+            background: var(--card);
+            border-radius: 18px;
             padding: clamp(24px, 5vw, 48px);
             margin: 24px 0;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 18px rgba(13,43,82,0.07);
+            border: 1px solid var(--border);
         }
 
+        /* ─── BADGE ─── */
         .badge {
             display: inline-block;
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 4px 14px;
+            background: #e6f7f1;
+            color: #0a6644;
+            padding: 4px 13px;
             border-radius: 20px;
-            font-size: 0.75em;
+            font-size: 0.72em;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
             margin-bottom: 14px;
         }
 
+        /* ─── TYPOGRAPHY ─── */
         h2 {
-            font-size: clamp(1.3em, 4vw, 1.85em);
-            color: #0f3460;
-            margin-bottom: 6px;
-            line-height: 1.3;
+            font-size: clamp(1.3em, 4vw, 1.9em);
+            color: var(--navy);
+            margin-bottom: 8px;
+            line-height: 1.25;
             font-weight: 800;
         }
-
-        .meta {
-            color: #999;
-            font-size: 0.83em;
-            margin-bottom: 22px;
-        }
-        .meta span {
-            display: inline-block;
-            background: #f0f4ff;
-            color: #3a5bd9;
-            padding: 2px 10px;
-            border-radius: 10px;
-            margin-right: 5px;
-            margin-top: 4px;
-        }
-
-        p { margin-bottom: 16px; color: #3a3a4a; }
-
         h3 {
-            font-size: 1.1em;
-            color: #0f3460;
-            margin: 28px 0 12px;
+            font-size: 1.08em;
+            color: var(--navy);
+            margin: 28px 0 10px;
             font-weight: 700;
         }
+        h4 {
+            font-size: 0.93em;
+            color: var(--navy);
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+        p {
+            margin-bottom: 15px;
+            color: var(--muted);
+            font-size: 0.97em;
+        }
+        p:last-child { margin-bottom: 0; }
 
-        /* TABLE */
+        /* ─── META TAGS ─── */
+        .meta {
+            color: #888;
+            font-size: 0.82em;
+            margin-bottom: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 5px;
+        }
+        .meta-author {
+            color: #888;
+            margin-right: 4px;
+        }
+        .meta span {
+            background: #edf0fc;
+            color: #3650c8;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        /* ─── TABLE ─── */
         .table-wrap {
             overflow-x: auto;
-            margin: 24px 0;
+            margin: 22px 0;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            border: 1px solid var(--border);
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 420px;
+            min-width: 380px;
         }
-        th {
-            background: #0f3460;
-            color: white;
-            padding: 13px 16px;
-            text-align: left;
-            font-size: 0.88em;
-            font-weight: 600;
-        }
-        th:first-child { border-radius: 12px 0 0 0; }
-        th:last-child  { border-radius: 0 12px 0 0; }
-        td {
+        thead th {
+            background: var(--navy);
+            color: #fff;
             padding: 12px 16px;
-            border-bottom: 1px solid #f0f2f5;
-            font-size: 0.93em;
+            text-align: left;
+            font-size: 0.85em;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+        thead th:first-child { border-radius: 12px 0 0 0; }
+        thead th:last-child  { border-radius: 0 12px 0 0; }
+        td {
+            padding: 11px 16px;
+            border-bottom: 1px solid #f0f2f8;
+            font-size: 0.92em;
             vertical-align: middle;
+            color: var(--text);
         }
         tr:last-child td { border-bottom: none; }
-        tr:nth-child(even) td { background: #f8fafc; }
-        .win   { color: #1b7a4a; font-weight: 700; }
-        .lose  { color: #c0392b; }
-        .tie   { color: #666; }
+        tr:nth-child(even) td { background: #f8fafd; }
+        .win  { color: #0a7a4a; font-weight: 700; }
+        .lose { color: #c0392b; }
+        .tie  { color: #666; }
 
-        /* FEATURES GRID */
+        /* ─── FEATURES GRID ─── */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 14px;
             margin: 20px 0;
         }
         .feat {
-            background: #f8fafc;
+            background: #f6f8fe;
             border-radius: 12px;
-            padding: 18px;
-            border-top: 3px solid #00c896;
+            padding: 18px 16px;
+            border-top: 3px solid var(--green);
         }
-        .feat h4 { color: #0f3460; margin-bottom: 6px; font-size: 0.95em; font-weight: 700; }
-        .feat p  { color: #666; font-size: 0.87em; margin: 0; }
+        .feat h4 { color: var(--navy); margin-bottom: 5px; font-size: 0.9em; }
+        .feat p   { color: var(--muted); font-size: 0.85em; margin: 0; }
 
-        /* VERDICT */
+        /* ─── VERDICT BOX ─── */
         .verdict {
-            background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+            background: #f0fbf5;
             border-radius: 12px;
-            padding: 22px 24px;
-            margin: 24px 0;
-            border-left: 4px solid #00c896;
+            padding: 20px 22px;
+            margin: 22px 0;
+            border-left: 4px solid var(--green);
         }
-        .verdict h4 { color: #1b5e20; margin-bottom: 8px; font-size: 1em; font-weight: 700; }
-        .verdict p  { color: #2d4a2d; margin: 0; font-size: 0.95em; }
+        .verdict h4 { color: #095c38; margin-bottom: 7px; font-size: 0.97em; }
+        .verdict p  { color: #1d4130; margin: 0; font-size: 0.94em; }
 
-        /* CTA */
-        .cta {
-            background: linear-gradient(135deg, #0f3460 0%, #1a4a8a 100%);
-            color: white;
-            border-radius: 16px;
-            padding: clamp(28px, 5vw, 42px);
-            text-align: center;
-            margin: 28px 0;
-        }
-        .cta h3 { font-size: clamp(1.1em, 3.5vw, 1.4em); margin-bottom: 10px; color: white; }
-        .cta p  { opacity: 0.85; margin-bottom: 22px; font-size: 0.97em; }
-        .cta a  {
-            display: inline-block;
-            background: #00c896;
-            color: #0f3460;
-            padding: 14px 32px;
-            border-radius: 10px;
-            font-weight: 800;
-            font-size: 1em;
-            text-decoration: none;
-            transition: opacity 0.2s, transform 0.2s;
-        }
-        .cta a:hover { opacity: 0.9; transform: translateY(-2px); }
-
-        /* INLINE LINK */
-        .inline-link {
-            color: #0f3460;
+        /* ─── INLINE LINK ─── */
+        a.inline-link {
+            color: var(--blue);
             font-weight: 600;
             text-decoration: underline;
             text-underline-offset: 3px;
         }
+        a.inline-link:hover { color: var(--green2); }
 
-        /* FOOTER */
-        footer {
-            background: #0f3460;
-            color: rgba(255,255,255,0.65);
+        /* ─── CTA BLOCK ─── */
+        .cta {
+            background: linear-gradient(140deg, var(--navy) 0%, var(--blue) 100%);
+            color: #fff;
+            border-radius: 18px;
+            padding: clamp(30px, 5vw, 48px) clamp(20px, 4vw, 42px);
             text-align: center;
-            padding: 36px 20px;
-            margin-top: 50px;
-            font-size: 0.88em;
-            line-height: 1.8;
+            margin: 28px 0;
+            box-shadow: 0 6px 28px rgba(13,43,82,0.2);
         }
-        footer a { color: #00c896; text-decoration: none; }
+        .cta h3 {
+            font-size: clamp(1.1em, 3.5vw, 1.45em);
+            color: #fff;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        .cta p {
+            color: rgba(255,255,255,0.78);
+            margin-bottom: 24px;
+            font-size: 0.96em;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--green);
+            color: #fff;
+            padding: 14px 34px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 1em;
+            text-decoration: none;
+            letter-spacing: 0.2px;
+            transition: background 0.18s, transform 0.18s;
+            box-shadow: 0 4px 14px rgba(0,184,122,0.28);
+        }
+        .cta-btn:hover {
+            background: var(--green2);
+            transform: translateY(-2px);
+        }
 
-        /* MOBILE FIXES */
-        @media (max-width: 480px) {
-            nav a { padding: 10px 10px; font-size: 0.82em; }
-            .card  { padding: 20px 16px; }
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--navy);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        .footer-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .footer-brand {
+            font-size: 0.78em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 14px;
+        }
+        .footer-text {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.88em;
+            margin-bottom: 8px;
+        }
+        .footer-text a {
+            color: var(--green);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .footer-text a:hover { text-decoration: underline; }
+        .footer-note {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.78em;
+            margin-top: 16px;
+        }
+
+        /* ─── MOBILE ─── */
+        @media (max-width: 520px) {
+            nav a { padding: 10px 11px; font-size: 0.81em; }
+            .card  { padding: 20px 16px; border-radius: 14px; }
+            .grid  { grid-template-columns: 1fr 1fr; }
+            .cta   { border-radius: 14px; }
+        }
+        @media (max-width: 360px) {
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">Digital Banking Hub</div>
+    <div class="logo-label">Digital Banking Hub</div>
     <h1>Stop Paying Fees to Your Bank.<br>There Is a Better Way.</h1>
     <p>Independent reviews and honest comparisons of the top neobanks in the US. No sponsored content, no fluff.</p>
 </header>
@@ -261,64 +346,67 @@
         <span class="badge">Featured Comparison</span>
         <h2>Chime vs Cash App: What Nobody Tells You (2026)</h2>
         <p class="meta">
-            By Daniel Y. &nbsp;
+            <span class="meta-author">By Daniel Y.</span>
             <span>Neobank</span>
             <span>Fees</span>
             <span>2026</span>
         </p>
 
         <p>I used both apps as my main account for six months. Here is what I actually found, without the marketing spin.</p>
-
         <p>Chime and Cash App are two of the most popular financial apps in the US right now, but they are built for completely different needs. Picking the wrong one can cost you real money.</p>
 
         <h3>Fee Breakdown</h3>
         <div class="table-wrap">
             <table>
-                <tr>
-                    <th>Feature</th>
-                    <th>Chime</th>
-                    <th>Cash App</th>
-                </tr>
-                <tr>
-                    <td>Monthly Fee</td>
-                    <td class="win">$0</td>
-                    <td class="win">$0</td>
-                </tr>
-                <tr>
-                    <td>Overdraft Fee</td>
-                    <td class="win">$0 via SpotMe (up to $200)</td>
-                    <td class="lose">$35</td>
-                </tr>
-                <tr>
-                    <td>ATM Fees</td>
-                    <td class="win">$0 at 60,000+ ATMs</td>
-                    <td class="lose">$2 out of network</td>
-                </tr>
-                <tr>
-                    <td>Instant Transfer</td>
-                    <td class="win">$0</td>
-                    <td class="lose">1.5% fee</td>
-                </tr>
-                <tr>
-                    <td>Savings APY</td>
-                    <td class="win">2.00% APY</td>
-                    <td class="lose">0.00%</td>
-                </tr>
-                <tr>
-                    <td>Early Paycheck</td>
-                    <td class="win">Up to 2 days early</td>
-                    <td class="tie">Standard timing</td>
-                </tr>
-                <tr>
-                    <td>Stock Investing</td>
-                    <td class="lose">Not available</td>
-                    <td class="win">From $1</td>
-                </tr>
-                <tr>
-                    <td>Bitcoin</td>
-                    <td class="lose">Not available</td>
-                    <td class="win">Available</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Chime</th>
+                        <th>Cash App</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monthly Fee</td>
+                        <td class="win">$0</td>
+                        <td class="win">$0</td>
+                    </tr>
+                    <tr>
+                        <td>Overdraft Fee</td>
+                        <td class="win">$0 via SpotMe (up to $200)</td>
+                        <td class="lose">$35</td>
+                    </tr>
+                    <tr>
+                        <td>ATM Fees</td>
+                        <td class="win">$0 at 60,000+ ATMs</td>
+                        <td class="lose">$2 out of network</td>
+                    </tr>
+                    <tr>
+                        <td>Instant Transfer</td>
+                        <td class="win">$0</td>
+                        <td class="lose">1.5% fee</td>
+                    </tr>
+                    <tr>
+                        <td>Savings APY</td>
+                        <td class="win">2.00% APY</td>
+                        <td class="lose">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td>Early Paycheck</td>
+                        <td class="win">Up to 2 days early</td>
+                        <td class="tie">Standard timing</td>
+                    </tr>
+                    <tr>
+                        <td>Stock Investing</td>
+                        <td class="lose">Not available</td>
+                        <td class="win">From $1</td>
+                    </tr>
+                    <tr>
+                        <td>Bitcoin</td>
+                        <td class="lose">Not available</td>
+                        <td class="win">Available</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
 
@@ -346,7 +434,6 @@
 
         <h3>Cash App: Best for sending money and investing</h3>
         <p>Cash App is not really a bank. It is more of a financial Swiss Army knife. You can split a bill, buy $5 worth of Apple stock, and pick up some Bitcoin, all from the same app. The Cash Card Boosts give you instant discounts at real stores.</p>
-
         <p>Just do not use it as a savings account. Zero APY means your money does nothing sitting there.</p>
 
         <div class="verdict">
@@ -358,10 +445,10 @@
     </article>
 
     <!-- CTA -->
-    <div class="cta">
+    <div class="cta" id="resources">
         <h3>Not Sure Which App Fits You?</h3>
         <p>Compare fees, APY rates and features across all major neobanks in one place. Updated for 2026.</p>
-        <a href="https://banksmobile.net">See Full Comparison at BanksMobile</a>
+        <a href="https://banksmobile.net" class="cta-btn">See Full Comparison at BanksMobile</a>
     </div>
 
     <!-- ARTICLE 2 -->
@@ -369,7 +456,7 @@
         <span class="badge">Quick Read</span>
         <h2>5 Signs Your Bank Is Costing You Too Much</h2>
         <p class="meta">
-            By Daniel Y. &nbsp;
+            <span class="meta-author">By Daniel Y.</span>
             <span>Guide</span>
             <span>Savings</span>
         </p>
@@ -397,8 +484,12 @@
 </div>
 
 <footer>
-    <p>Digital Banking Hub &nbsp; Independent fintech research &nbsp; No sponsored content</p>
-    <p>For detailed comparisons and updated rates: <a href="https://banksmobile.net">banksmobile.net</a></p>
+    <div class="footer-inner">
+        <div class="footer-brand">Digital Banking Hub</div>
+        <p class="footer-text">Independent fintech research. No sponsored content, no affiliate bias.</p>
+        <p class="footer-text">For detailed comparisons and updated rates: <a href="https://banksmobile.net">banksmobile.net</a></p>
+        <p class="footer-note">Content is for informational purposes only. Not financial advice.</p>
+    </div>
 </footer>
 
 </body>
